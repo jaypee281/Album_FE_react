@@ -1,0 +1,58 @@
+.photo{
+   max-width:1000px;
+   margin: 0 auto;
+   display: flex;
+   flex-wrap: wrap;
+}
+.photoList{
+list-style-type:none;
+}
+.form  {
+    background: white;
+    margin: 0 auto;
+    max-width: 360px;
+    padding: 45px;
+    text-align: center;
+}
+.imageUpload{
+    font-family: sans-serif;
+    background: #f2f2f2;
+    width: 200px;
+    border: none;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;   
+    margin: 0 0 15px;
+}
+.imageUpload input{
+    font-family: sans-serif;
+    background: blanchedalmond;
+    width: 100%;
+    border:none;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;   
+    margin: 0 0 15px;
+
+}
+.unlike-button{
+    margin: 15px 50px 15px 120px;
+    border-radius: 12px;
+    padding: 10px;
+}
+.like-button{
+    margin: 15px 50px 15px 120px;
+    background-color: crimson;
+    color: white;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.delete-button{
+    margin: 15px 30px;
+    border-radius: 12px;
+    padding: 10px;
+}
+.image-buttons{
+    padding:10px 25%;
+}
