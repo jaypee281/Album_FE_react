@@ -8,12 +8,12 @@ export default function reducer(state, action) {
         images: action.payload
       };
     case "ADD_IMAGE":
-      // if (!action.payload) {
-      //   return state;
-      // }
-      // if (state.images.findIndex(t => t.image === action.payload) > -1) {
-      //   return state;
-      // }
+      if (!action.payload) {
+        return state;
+      }
+      if (state.images.findIndex(t => t.image === action.payload) > -1) {
+        return state;
+      }
       const newImage=  {
         id: uuidv4(),
         image: action.payload,
@@ -38,12 +38,12 @@ export default function reducer(state, action) {
         images: likedImages
       };
     case "UPDATE_IMAGE":
-      // if (!action.payload) {
-      //   return state;
-      // }
-      // if (state.images.findIndex(t => t.image === action.payload) > -1) {
-      //   return state;
-      // }
+      if (!action.payload) {
+        return state;
+      }
+      if (state.images.findIndex(t => t.image === action.payload) > -1) {
+        return state;
+      }
       const updatedImage =   {...state.currentImage,image:action.payload }
       const updatedImageIndex = state.images.findIndex(
         t => t.id === state.currentImage.id
