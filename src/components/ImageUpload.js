@@ -25,7 +25,7 @@ export default function ImageUpload() {
     event.preventDefault();
     if (currentImage.image) {
         const response = await axios.post(
-          "http://localhost:8080/album/images/update",
+          "http://localhost:8080/album/update",
           { id:currentImage.id,
             image: image
           }
@@ -33,7 +33,7 @@ export default function ImageUpload() {
       dispatch({ type: "UPDATE_IMAGE", payload: image });
     } else {
       const response = await axios.post(
-        "http://localhost:8080/album/images/add",
+        "http://localhost:8080/album/add",
         {
           id: uuidv4(),
           image: image,

@@ -25,7 +25,7 @@ const App = () => {
   const initialState = useContext(AlbumContext);
   const [state, dispatch] = useReducer(albumReducer, initialState);
 
-  const savedImages = useAPI("http://localhost:8080/album/images");
+  const savedImages = useAPI("http://localhost:8080/album");
   console.log(savedImages);
   useEffect(
     () => {

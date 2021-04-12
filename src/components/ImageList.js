@@ -20,7 +20,7 @@ export default function ImageList() {
             <span
               onDoubleClick={async () => {
                 const response = await axios.post(
-                  `http://localhost:8080/album/images/${i.id}`,
+                  `http://localhost:8080/album/${i.id}`,
                   {
                     like: !i.like
                   }
@@ -45,7 +45,7 @@ export default function ImageList() {
             <button className="delete-button"
               onClick={async () => {
                 await axios.delete(
-                  `http://localhost:8080/album/images/${i.id}`
+                  `http://localhost:8080/album/${i.id}`
                 );
                 dispatch({ type: "REMOVE_IMAGE", payload: i });
               }}
